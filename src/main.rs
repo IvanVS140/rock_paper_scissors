@@ -28,7 +28,6 @@ fn main() {
         println!("\n> Your choise is SCISSORS\n");
     }
 
-    //println!("vega_choise is: {}", vega_choise);
     if vega_choise == 1 {
         println!("> Vega chose ROCK\n");
     }  else if vega_choise == 2 {
