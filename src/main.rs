@@ -1,11 +1,12 @@
 use std::io;
 use rand::Rng;
-//use std::cmp::Ordering;
 
 fn main() {
-    println!("I am Vega. A UAC's artificial Intelligence. Let's play game..");
+    println!("\nI am Vega. A UAC's artificial Intelligence. Let's play game..\n");
 
+    loop {
     let vega_choise = rand::thread_rng().gen_range(1,4);
+    println!("> Vega made his choice\n");
     println!("vega_choise is: {}", vega_choise);
     if vega_choise == 1 {
         println!("rock");
@@ -14,7 +15,7 @@ fn main() {
     }  else {
         println!("scissirs")
     }
-    loop {
+
     println!("Enter your choise: 1 - ROCK, 2 - PAPPER, and 3 for SCISSORS");
     let mut user_choise = String::new();
     io::stdin()
@@ -33,16 +34,34 @@ fn main() {
     else {
         if vega_choise == 1 {
             if user_choise == 3 {
-                println!("Vega wins! ROCK > SCISSORS");
+                println!("Vega wins! ROCK beats SCISSORS");
                 break
                 }
+            else if user_choise == 2 {
+                println!("User wins! PAPPER beats ROCK");
+                break
+                }
+            }
         }
-        if vega_choise == 1 {
-            if user_choise == 2 {
-                println!("User wins! ROCK > SCISSORS");
+        if vega_choise == 2 {
+            if user_choise == 3 {
+                println!("User wins! PAPPER beats ROCK");
                 break
                 }
-            }   
+            else if user_choise == 1 {
+                println!("Vega wins! PAPPER beats ROCK");
+                break
+                }
+            }
+        if vega_choise == 3 {
+            if user_choise == 2 {
+                println!("Vega wins! SCISSORS beats PAPPER");
+                break
+                }
+            else if user_choise == 1 {
+                println!("User wins! ROCK beats SCISSORS");
+                break
+            }
         }
     }
 }
