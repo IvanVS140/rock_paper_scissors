@@ -24,52 +24,54 @@ fn main() {
         else if user_choise == 2 {
             println!("\n> Your choise is PAPER\n");
         }
-    else {
-        println!("\n> Your choise is SCISSORS\n");
-    }
+        else {
+            println!("\n> Your choise is SCISSORS\n");
+        };
 
-    if vega_choise == 1 {
-        println!("> Vega chose ROCK\n");
-    }   else if vega_choise == 2 {
-        println!("> Vega chose PAPER\n")
-    }   else {
-        println!("> Vega chose SCISSORS\n")
-    }
-
-    if vega_choise == user_choise {
-        println!("\nround draw\n");
-        continue
-    }
-    else {
         if vega_choise == 1 {
-            if user_choise == 3 {
-                println!("Vega wins! ROCK beats SCISSORS\n");
-                break
-            }
-            else if user_choise == 2 {
-                println!("User wins! PAPPER beats ROCK\n");
-                break
-            }
+            println!("> Vega chose ROCK\n");
         }
-    }
-        if vega_choise == 2 {
-            if user_choise == 3 {
-                println!("User wins! PAPPER beats ROCK\n");
-                break
-            }
-            else if user_choise == 1 {
-                println!("Vega wins! PAPPER beats ROCK\n");
-                break
-            }
+        else if vega_choise == 2 {
+            println!("> Vega chose PAPER\n")
         }
-        if vega_choise == 3 {
-            if user_choise == 2 {
-                println!("Vega wins! SCISSORS beats PAPPER\n");
-                break
+        else {
+            println!("> Vega chose SCISSORS\n")
+        };
+
+        if vega_choise == user_choise {
+            println!("\nround draw\n");
+            continue
+        }
+        else {
+            if vega_choise == 1 {
+                if user_choise == 3 {
+                    println!("Vega wins! ROCK beats SCISSORS\n");
+                    break
+                }
+                else if user_choise == 2 {
+                    println!("User wins! PAPPER beats ROCK\n");
+                    break
+                }
             }
-            else if user_choise == 1 {
-                println!("User wins! ROCK beats SCISSORS\n");
-                break
+            if vega_choise == 2 {
+                if user_choise == 3 {
+                    println!("User wins! PAPPER beats ROCK\n");
+                    break
+                }
+                else if user_choise == 1 {
+                    println!("Vega wins! PAPPER beats ROCK\n");
+                    break
+                }
+            }
+            if vega_choise == 3 {
+                if user_choise == 2 {
+                    println!("Vega wins! SCISSORS beats PAPPER\n");
+                    break
+                }
+                else if user_choise == 1 {
+                    println!("User wins! ROCK beats SCISSORS\n");
+                    break
+                }
             }
         }
     }
