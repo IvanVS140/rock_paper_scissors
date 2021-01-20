@@ -2,7 +2,7 @@ use std::io;
 use rand::Rng;
 
 fn main() {
-    println!("\nI am Vega. A UAC's artificial Intelligence. Let's play 'ROCK, PAPER, SCISSORS' game..\n");
+    println!("\nI am Vega. A UAC's artificial intelligence. Let's play 'ROCK, PAPER, SCISSORS' game..\n");
 
     loop {
         let vega_choise = rand::thread_rng().gen_range(1,4);
