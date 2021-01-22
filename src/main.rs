@@ -7,7 +7,7 @@ fn main() {
     loop {
         let vega_choise = rand::thread_rng().gen_range(1,4);
         println!("> Vega made his choice\n");
-    
+
         println!("Enter your choise: 1 - ROCK, 2 - PAPER, and 3 for SCISSORS");
         let mut user_choise = String::new();
         io::stdin()
