@@ -1,3 +1,4 @@
+#![allow(unused)]
 use std::io;
 use rand::Rng;
 
@@ -10,25 +11,30 @@ fn main() {
 
         println!("Enter your choise: 1 - ROCK, 2 - PAPER, and 3 for SCISSORS");
         let mut user_choice = String::new();
-        io::stdin()
-            .read_line(&mut user_choice)
-            .expect("Failed to read line");
+        match io::stdin().read_line(&mut user_choice) {
+            Ok(n) => {
+                println!("\nLets see..")
+            },
+            Err(error) => {
+                println!("Error: {}", error);
+                continue;
+            },
+        }
 
         let user_choice = match user_choice.trim().parse::<usize>() {
             Ok(num) => num - 1,
             Err(_) => continue,
-
         };
-        println!("\nVega chose {}", game_list[vega_choice]);
-        println!("User chose is {}", game_list[user_choice]);
 
-        if (vega_choice + 1) % 3 == user_choice {
+        println!("\n{} vs {}", game_list[user_choice], game_list[vega_choice]);
+
+        if vega_choice == user_choice {
             println!("\nDraw.");
             continue
         }
-        else if vega_choice == 1 && user_choice == 3 ||
-                vega_choice == 2 && user_choice == 1 ||
-                vega_choice == 3 && user_choice == 2 {
+        else if vega_choice == 0 && user_choice == 2 ||
+                vega_choice == 1 && user_choice == 0 ||
+                vega_choice == 2 && user_choice == 1 {
             println!("\nVega wins! {} beats {}\n", game_list[vega_choice], game_list[user_choice]);
             break
         }
