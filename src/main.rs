@@ -4,12 +4,12 @@ use rand::Rng;
 
 fn main() {
     println!("\nI am Vega. A UAC's artificial intelligence. Let's play 'ROCK, PAPER, SCISSORS' game..");
-    let game_list = ["Rock", "Paper", "Scissors"];
+    let game_list = ["Rock", "Scissors", "Paper"];
     loop {
         let vega_choice: usize = rand::thread_rng().gen_range(0,3);
         println!("\nVega made his choice.\n");
 
-        println!("Enter your choise: 1 - ROCK, 2 - PAPER, and 3 for SCISSORS");
+        println!("Enter your choise: 1 - ROCK, 2 - SCISSORS, and 3 for PAPER");
         let mut user_choice = String::new();
         match io::stdin().read_line(&mut user_choice) {
             Ok(n) => {
@@ -32,9 +32,9 @@ fn main() {
             println!("\nDraw.");
             continue
         }
-        else if vega_choice == 0 && user_choice == 2 ||
-                vega_choice == 1 && user_choice == 0 ||
-                vega_choice == 2 && user_choice == 1 {
+        else if vega_choice == 0 && user_choice == 1 ||
+                vega_choice == 1 && user_choice == 2 ||
+                vega_choice == 2 && user_choice == 0 {
             println!("\nVega wins! {} beats {}\n", game_list[vega_choice], game_list[user_choice]);
             break
         }
