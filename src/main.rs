@@ -16,7 +16,7 @@ fn main() {
                 println!("\nLets see..")
             },
             Err(error) => {
-                println!("Error: {}", error);
+                println!("Error occurred: {}", error);
                 continue;
             },
         }
@@ -32,9 +32,7 @@ fn main() {
             println!("\nDraw.");
             continue
         }
-        else if vega_choice == 0 && user_choice == 1 ||
-                vega_choice == 1 && user_choice == 2 ||
-                vega_choice == 2 && user_choice == 0 {
+        else if vega_choice == (user_choice + 2) % 3 {
             println!("\nVega wins! {} beats {}\n", game_list[vega_choice], game_list[user_choice]);
             break
         }
