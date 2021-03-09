@@ -4,7 +4,7 @@ use rand::Rng;
 
 fn main() {
     let meet_vega: &str = "I am Vega. A UAC's artificial intelligence";
-    let game_invite: &str = "Let's play 'ROCK, PAPER, SCISSORS' game";
+    let game_invite: &str = "Let's play 'ROCK, SCISSORS, PAPER' game";
 
     println!("\n{}. {}..", meet_vega, game_invite);
 
@@ -17,9 +17,7 @@ fn main() {
         println!("Enter your choise: 1 - ROCK, 2 - SCISSORS, and 3 for PAPER");
         let mut user_choice = String::new();
         match io::stdin().read_line(&mut user_choice) {
-            Ok(n) => {
-                println!("\nLets see..")
-            },
+            Ok(_) => (),
             Err(error) => {
                 println!("Error occurred: {}", error);
                 continue;
