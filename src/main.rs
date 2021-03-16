@@ -18,12 +18,9 @@ fn main() {
 
         println!("Enter your choise: 1 - ROCK, 2 - SCISSORS, and 3 for PAPER");
         let mut user_choice = String::new();
-        match io::stdin().read_line(&mut user_choice) {
-            Ok(_) => (),
-            Err(error) => {
-                println!("Error occurred: {}", error);
-                continue;
-            },
+        if let Err(err) = io::stdin().read_line(&mut user_choice) {
+            println!("Error occurred: {}", err);
+            continue;
         }
 
         let user_choice = match user_choice.trim().parse::<usize>() {
