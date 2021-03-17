@@ -1,7 +1,7 @@
-mod diy_functions;
+mod functions;
 
 #[allow(unused_imports)]
-use diy_functions::who_wins;
+use functions::who_wins;
 
 #[cfg(test)]
 mod tests {

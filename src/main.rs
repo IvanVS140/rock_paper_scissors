@@ -1,8 +1,8 @@
-mod diy_functions;
+mod functions;
 
 use std::io;
 use rand::Rng;
-use diy_functions::who_wins;
+use functions::who_wins;
 
 fn main() {
     let meet_vega: &str = "I am Vega. A UAC's artificial intelligence";
