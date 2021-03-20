@@ -6,11 +6,11 @@ pub fn who_wins(x: usize, y: usize) -> u32 {
         return 0;
     }
     else if x == (y + 2) % 3 {
-        println!("Vega wins!");
+        println!("Vega wins!\n");
         return 1;
     }
     else {
-        println!("User wins!");
+        println!("User wins!\n");
         return 2;
     }
 }
