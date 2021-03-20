@@ -16,7 +16,7 @@ fn main() {
         let vega_choice: usize = rand::thread_rng().gen_range(0,3);
         println!("\nVega made his choice.\n");
 
-        println!("Enter your choise: 1 - ROCK, 2 - SCISSORS, and 3 for PAPER");
+        println!("Enter your choice: 1 - ROCK, 2 - SCISSORS, and 3 for PAPER");
         let mut user_choice = String::new();
         if let Err(err) = io::stdin().read_line(&mut user_choice) {
             println!("Error occurred: {}", err);
