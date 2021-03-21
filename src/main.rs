@@ -5,7 +5,7 @@ use rand::Rng;
 use functions::who_wins;
 
 fn main() {
-    let meet_vega: &str = "I am Vega. A UAC's artificial intelligence.";
+    let meet_vega: &str = "I am Vega. A UAC's artificial intelligence";
     let game_invite: &str = "Let's play 'ROCK, SCISSORS, PAPER' game";
 
     println!("\n{}. {}..", meet_vega, game_invite);
@@ -28,7 +28,7 @@ fn main() {
             Err(_) => continue,
         };
 
-        println!("\n{} vs {}", game_list[user_choice], game_list[vega_choice]);
+        println!("\n< {} > vs < {} >", game_list[user_choice], game_list[vega_choice]);
 
         if who_wins(vega_choice, user_choice) != 0 {
             break;
