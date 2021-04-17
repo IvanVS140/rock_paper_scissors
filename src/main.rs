@@ -28,7 +28,7 @@ fn main() {
             Err(_) => continue,
         };
 
-        println!("\n< {} > vs < {} >", game_list[user_choice], game_list[vega_choice]);
+        println!("\n > {} VS {} <\n", game_list[user_choice], game_list[vega_choice]);
 
         if who_wins(vega_choice, user_choice) != 0 {
             break;

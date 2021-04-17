@@ -2,7 +2,7 @@
 
 pub fn who_wins(x: usize, y: usize) -> u32 {
     if x == y {
-        println!("\nDraw.");
+        println!("Draw.");
         return 0;
     }
     else if x == (y + 2) % 3 {
